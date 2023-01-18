@@ -2,7 +2,7 @@ const app = Vue.createApp({
     name:'Random Mail',
     data(){
         return {
-            isLoading : false,
+            // isLoading : false,
             emails :[]
         }
     },
@@ -10,7 +10,7 @@ const app = Vue.createApp({
 
     methods:{
         getRandomEmail(){
-            this.isLoading=true;
+            // this.isLoading=true;
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((response) => {
                 this.emails.push(response.data.response);
@@ -25,7 +25,7 @@ const app = Vue.createApp({
     mounted(){
         for(let i=0;i<10;i++){
             this.getRandomEmail();
-            isLoading=false;
+            // isLoading=false;
         }
     }
 
