@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==' crossorigin='anonymous'/>
     <!-- VueJs -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Axios -->
@@ -26,6 +28,7 @@
 <body>
     <div id="root">
         
+        <i v-if="isLoading" class="fa-solid fa-spin fa-spinner fa-4x"></i>
         <ul>
             <li v-for="email in emails">{{email}}</li>
         </ul>
